@@ -1,0 +1,11 @@
+--- !ruby/object:Game
+word: "mazzini\r\n"
+display_word: __zzini
+guessed_letters:
+- z
+- z
+- i
+- i
+- n
+ww: false
+wrong_guesses: 0
