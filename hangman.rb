@@ -65,7 +65,7 @@ class Game
     puts "\nࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊ"
     puts "This is hangman game."
     puts "I randomly select a word and you must guess it by guessing one letter at a time"
-    puts "You can guess incorrectly 5 times."
+    puts "You can guess incorrectly 8 times."
     puts "Have fun"
     puts "ࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊࢊ\n\n"
     puts "Press enter to continue".blink.reverse_color
@@ -76,7 +76,7 @@ class Game
     !is_loaded ? introduction() : true
     is_game_won = false
     !is_loaded ? self.display_word = "_" * (self.word.length-2) : true
-    round_count = 5
+    round_count = 8
     !is_loaded ? self.wrong_guesses = 0 : true
     !is_loaded ? self.guessed_letters = [] : true
     while self.wrong_guesses < round_count && !is_game_won
@@ -111,5 +111,4 @@ class Game
 end
 
 x = Game.new()
-puts x.word
 x.play_game()
